@@ -8,8 +8,8 @@ const cards = [
     iconBg: "rgba(100,255,218,0.12)",
     iconBorder: "rgba(100,255,218,0.25)",
     title: "Frontend Architecture",
-    desc: "Crafting fast, accessible interfaces with React & Next.js. From pixel-perfect UIs to seamless state management.",
-    tags: ["HTML", "CSS", "JavaScript", "Tailwind"],
+    desc: "Crafting fast, accessible interfaces From pixel-perfect UIs to seamless state management.",
+    tags: ["HTML", "JavaScript" , "CSS", "C++", "React", "Python", "Tailwind"],
   },
   {
     glow: "#a78bfa",
