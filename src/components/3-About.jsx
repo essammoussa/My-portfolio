@@ -45,7 +45,7 @@ const cards = [
     iconBorder: "rgba(107,91,255,0.25)",
     title: "React UI Development",
     desc: "Interactive, accessible React components with modern styling and animations.",
-    tags: ["React", "Chakra UI", "Framer Motion", "Redux ,Shadcn UI"],
+    tags: ["React", "Chakra UI", "Framer Motion", "Redux" ,"Shadcn UI"],
   },
   {
     glow: "#fbbf24",
