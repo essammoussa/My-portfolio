@@ -2,74 +2,76 @@ import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const PROJECTS = [
-
   {
     id: 1,
     title: "Admin Dashboard",
-    description: "A responsive admin dashboard built with React.js and Material UI, featuring interactive charts, calendar management, and validated forms for efficient data administration.",
+    description:
+      "A responsive admin dashboard built with React.js and Material UI, featuring interactive charts, calendar management, and validated forms for efficient data administration.",
     tags: ["React.js", "Material UI", "Nivo Charts", "FullCalendar", "Formik", "Yup"],
     liveUrl: "https://essammoussa.github.io/admin-dashboard/",
-    images: [
-      "/public/imgs/Admin.png",
-    ],
-  }
-,
+    images: ["/imgs/Admin.png"],
+  },
+
   {
     id: 2,
     title: "E-Commerce Platform",
-    description: "A sleek, responsive online store with smooth animations and an interactive shopping experience.",
+    description:
+      "A sleek, responsive online store with smooth animations and an interactive shopping experience.",
     tags: ["React", "TailwindCSS", "Framer", "Shadcn/UI"],
     liveUrl: "https://essammoussa.github.io/luxe-ecommerce/",
-    images: [
-      "/public/imgs/Ecommerce.png",
-    ],
+    images: ["/imgs/Ecommerce.png"],
   },
 
-    {
+  {
     id: 3,
     title: "Library Management System",
-    description: "An intuitive frontend library management system with a sleek, interactive admin dashboard for easy catalog and user management..",
-    tags: ["React" , "TypeScript ", "TailwindCSS", "Shadcn/UI", "Radix UI" , "Lucide React",  " Recharts" ,"Redux" , "ReactQuery" , "Zod"]
-    ,liveUrl: "https://essammoussa.github.io/library-management-system/",
+    description:
+      "An intuitive frontend library management system with a sleek, interactive admin dashboard for easy catalog and user management.",
+    tags: [
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Shadcn/UI",
+      "Radix UI",
+      "Lucide React",
+      "Recharts",
+      "Redux",
+      "ReactQuery",
+      "Zod",
+    ],
+    liveUrl: "https://essammoussa.github.io/library-management-system/",
     images: [
-      "/public/imgs/Library.png",
-      "/public/imgs/libr1.png",
-      "/public/imgs/libr2.png",
-      "/public/imgs/libr3.png",
-      "/public/imgs/libr4.png",
-      "/public/imgs/libr5.png",
-      "/public/imgs/libr6.png",
-      "/public/imgs/libr7.png",
-      "/public/imgs/libr8.png",
+      "/imgs/Library.png",
+      "/imgs/libr1.png",
+      "/imgs/libr2.png",
+      "/imgs/libr3.png",
+      "/imgs/libr4.png",
+      "/imgs/libr5.png",
+      "/imgs/libr6.png",
+      "/imgs/libr7.png",
+      "/imgs/libr8.png",
     ],
   },
 
   {
     id: 4,
     title: "Travel Companion",
-    description: "Full-featured travel website with intelligent search, dynamic content filtering, and real-time local time for destinations worldwide.",
+    description:
+      "Full-featured travel website with intelligent search, dynamic content filtering, and real-time local time for destinations worldwide.",
     tags: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://essammoussa.github.io/Travel-recommedation-company/",
-    images: [
-      "/public/imgs/Travel.png",
-
-    ],
+    images: ["/imgs/Travel.png"],
   },
 
   {
     id: 5,
     title: "Weather Dashboard",
-    description: "An interactive weather app that displays current conditions, forecasts, and historical data with beautiful visualizations.",
+    description:
+      "An interactive weather app that displays current conditions, forecasts, and historical data with beautiful visualizations.",
     tags: ["JavaScript", "API", "Chart.js"],
     liveUrl: "https://essammoussa.github.io/weather-dashboard/",
-    images: [
-      "/public/imgs/Weather.png",
-
-    ],
+    images: ["/imgs/Weather.png"],
   },
-
-
-  
 ];
 
 const CERTIFICATES = [
@@ -77,7 +79,8 @@ const CERTIFICATES = [
     id: 1,
     title: "Introduction to software engineering",
     organization: "IBM",
-    description: "Covered software development principles, life cycle models, and best practices for designing and maintaining quality software.",
+    description:
+      "Covered software development principles, life cycle models, and best practices for designing and maintaining quality software.",
     certificateUrl: "https://coursera.org/share/94e2d7b74576af074e879bff04ad52ad",
     images: ["/imgs/Coursera4.png"],
   },
@@ -85,7 +88,8 @@ const CERTIFICATES = [
     id: 2,
     title: "Introduction to HTML, CSS, & JavaScript",
     organization: "IBM",
-    description:"Fundamentals of web development, building responsive web pages with HTML, styling with CSS, and adding interactivity with JavaScript.",
+    description:
+      "Fundamentals of web development, building responsive web pages with HTML, styling with CSS, and adding interactivity with JavaScript.",
     certificateUrl: "https://coursera.org/share/4d32875d22543e006636017caf01a3e0",
     images: ["/imgs/Coursera3.png"],
   },
@@ -93,26 +97,29 @@ const CERTIFICATES = [
     id: 3,
     title: "JavaScript Algorithms",
     organization: "IBM",
-    description: "Advanced certification covering data structures, algorithms, and problem-solving techniques in JavaScript.",
+    description:
+      "Advanced certification covering data structures, algorithms, and problem-solving techniques in JavaScript.",
     certificateUrl: "https://coursera.org/share/6d5c10af2cd88feaa7b1bc99d53b8f91",
     images: ["/imgs/Coursera2.png"],
   },
   {
     id: 4,
-    title: "Devloping front end apps with React",
+    title: "Developing front end apps with React",
     organization: "IBM",
-    description: "Advanced certification covering React design patterns and performance optimization techniques.",
+    description:
+      "Advanced certification covering React design patterns and performance optimization techniques.",
     certificateUrl: "https://coursera.org/share/f3d9e34497afb0c3c8ba44a24e400baf",
     images: ["/imgs/Coursera1.png"],
   },
-    {
+  {
     id: 5,
     title: "Developing Back-End Apps with Node.js and Express",
     organization: "IBM",
-    description: "Comprehensive certification covering React, Node.js, databases, and modern web development practices.",
+    description:
+      "Comprehensive certification covering React, Node.js, databases, and modern web development practices.",
     certificateUrl: "",
     images: ["/imgs/Coursera1.png"],
-  }
+  },
 ];
 
 function ImageGallery({ images }) {

@@ -8,6 +8,7 @@ import About from "./components/3-About.jsx";
 import Projects from "./components/4-Projects.jsx";
 import Contact from "./components/5-Contact.jsx";
 import Footer from "./components/6-Footer.jsx";
+import SEO from "./components/SEO.jsx";
 
 const RECAPTCHA_SITE_KEY = "6LcjNnosAAAAACXwLBVv84EuOJu3geA1ovCQO-vf";
 
@@ -35,6 +36,12 @@ export default function App() {
 
   return (
     <GoogleReCaptchaProvider reCaptchaKey={RECAPTCHA_SITE_KEY}>
+      {/* ↓ SEO: manages <title>, <meta description>, and <link rel="canonical"> */}
+      <SEO
+        title="Home"
+        description="Welcome to Essam Moussa's portfolio — fullstack developer building modern, accessible web experiences."
+        canonical="/"
+      />
       <main className="app-container">
         <LightPillar />
         <Header />

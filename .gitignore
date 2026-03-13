@@ -11,9 +11,6 @@ node_modules
 dist
 dist-ssr
 *.local
-styles.css
-contact.jsx
-public
 
 # Editor directories and files
 .vscode/*
