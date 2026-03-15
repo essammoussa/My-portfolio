@@ -1226,7 +1226,7 @@ header {
 .pc2-btn {
   font-family: 'DM Mono', monospace;
   font-size: 0.65rem;
-  padding: 8px 16px;
+  padding: 9px 50px;
   border-radius: 999px;
   background: rgba(99, 179, 237, 0.12);
   border: 1px solid rgba(99, 179, 237, 0.35);
