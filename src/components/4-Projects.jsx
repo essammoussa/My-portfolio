@@ -57,10 +57,19 @@ const PROJECTS = [
     id: 4,
     title: "Travel Companion",
     description:
-      "Full-featured travel website with intelligent search, dynamic content filtering, and real-time local time for destinations worldwide.",
+      "Full-featured travel landing page with intelligent search, dynamic content filtering, and real-time local time for destinations worldwide.",
     tags: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://essammoussa.github.io/Travel-recommedation-company/",
     images: ["/imgs/Travel.png"],
+  },
+  {
+    id: 6,
+    title: "Plant Paradise",
+    description:
+      "A responsive and user-friendly landing page for plant enthusiasts, offering a curated collection of plants and information about their care.",
+    tags: ["React", "CSS", "JavaScript"],
+    liveUrl: "https://essammoussa.github.io/plant-paradise-project/",
+    images: ["public/imgs/Plant.png"],
   },
 
   {
