@@ -69,7 +69,7 @@ const PROJECTS = [
       "A responsive and user-friendly landing page for plant enthusiasts, offering a curated collection of plants and information about their care.",
     tags: ["React", "CSS", "JavaScript"],
     liveUrl: "https://essammoussa.github.io/plant-paradise-project/",
-    images: ["public/imgs/Plant.png"],
+    images: ["/imgs/Plant.png"],
   },
 
   {
