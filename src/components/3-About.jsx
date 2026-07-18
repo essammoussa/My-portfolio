@@ -18,7 +18,7 @@ const cards = [
     iconBorder: "rgba(167,139,250,0.25)",
     title: "Backend & APIs",
     desc: "Building robust REST & GraphQL APIs with Node.js, Express, and PostgreSQL. Scalable and secure by design.",
-    tags: ["Node.js", "Express", "GraphQL", "Redis"],
+    tags: ["Node.js", "Express", "MongoDB", "GraphQL", "Redis"],
   },
   {
     glow: "#64ffda",
@@ -72,6 +72,7 @@ const skills = [
   { name: "Node.js", level: 60 },
   { name: "JavaScript", level: 85 },
   { name: "Python", level: 75 },
+  { name: "MongoDB", level: 70 },
   { name: "SQL", level: 70 },
   { name: "C++", level: 70 },
 ];

@@ -2,6 +2,58 @@ import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const PROJECTS = [
+   {
+    id: 9,
+    title: "EasyCare Hospital Management System",
+    description:
+      "A comprehensive full-stack hospital management system. Features a responsive React dashboard for patient intake, staff schedules, and prescriptions, backed by a secure MongoDB/Express API.",
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "RESTful API"],
+    liveUrl: "https://github.com/essammoussa/easycare-hospital-management",
+    images: [
+  
+      "/imgs/easycare1.png",
+      "/imgs/easycare2.png",
+      "/imgs/easycare3.png",
+      "/imgs/easycare4.png",
+      "/imgs/easycare5.png",
+      "/imgs/easycare6.png",
+      "/imgs/easycare7.png",
+      "/imgs/easycare8.png",
+      "/imgs/easycare9.png",
+      "/imgs/easycare10.png",
+      "/imgs/easycare11.png",
+      "/imgs/easycare12.png",
+      "/imgs/easycare13.png",
+      "/imgs/easycare14.png",
+      "/imgs/easycare15.png",
+      "/imgs/easycare16.png",
+      "/imgs/easycare17.png",
+      "/imgs/easycare18.png",
+      "/imgs/easycare19.png",
+      "/imgs/easycare20.png",
+      "/imgs/easycare21.png",
+      "/imgs/easycare22.png",
+    ],
+  },
+  {
+    id: 7,
+    title: "Najm Wedding Halls",
+    description:
+      "A full-stack booking and management system for wedding venues. Features an interactive reservation calendar, packages catalog, automated client billing, and an admin dashboard.",
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "REST API"],
+    liveUrl: "https://github.com/essammoussa/wedding-halls-api",
+    images: ["/imgs/NajmWeddingHalls.png"],
+  },
+  {
+    id: 8,
+    title: "War of Life E-Commerce",
+    description:
+      "A premium, responsive clothing web platform featuring an interactive product showcase, smooth animated transitions, dynamic cart management, and a sleek checkout system.",
+    tags: ["React.js", "TailwindCSS", "Framer Motion", "Redux Toolkit", "Vite"],
+    liveUrl: "https://github.com/essammoussa/streetwear-ecommerce",
+    images: ["/imgs/WarOfLife1.png", "/imgs/WarOfLife2.png"],
+  },
+ 
   {
     id: 1,
     title: "Admin Dashboard",
@@ -126,8 +178,8 @@ const CERTIFICATES = [
     organization: "IBM",
     description:
       "Comprehensive certification covering React, Node.js, databases, and modern web development practices.",
-    certificateUrl: "",
-    images: ["/imgs/Coursera1.png"],
+    certificateUrl: "https://coursera.org/share/98466e9e4d249d0306927ea45e841b9b",
+    images: ["/imgs/Coursera5.png"],
   },
 ];
 
