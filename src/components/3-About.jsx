@@ -85,7 +85,6 @@ const fadeUp = {
   }),
 };
 
-
 const containerVariants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.07, delayChildren: 0.1 } },
