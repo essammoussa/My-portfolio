@@ -121,7 +121,7 @@ export default function Hero() {
                 />
               </svg>
             </a>
-            <a href="/EssamMoussa_CV.pdf" download="EssamMoussa_CV.pdf" className="btn btn-resume">Download CV</a>
+            <a href="/imgs/EssamMoussa_CV.pdf" download="EssamMoussa_CV.pdf" className="btn btn-resume">Download CV</a>
           </div>
         </motion.div>
       </div>
