@@ -108,7 +108,6 @@ export default function Contact() {
       {/* Header */}
       <div className="c-header">
         <div>
-          <div className="c-tag"><span className="c-tag-dot" />Let's Talk</div>
           <h2 className="c-title">Get In<br /><span className="c-title-ghost">Touch</span></h2>
         </div>
         <p className="c-desc">Have a project in mind or want to work together? Drop me a message and I'll get back to you.</p>
