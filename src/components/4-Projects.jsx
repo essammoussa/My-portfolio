@@ -8,7 +8,7 @@ const PROJECTS = [
     description:
       "A comprehensive full-stack hospital management system. Features a responsive React dashboard for patient intake, staff schedules, and prescriptions, backed by a secure MongoDB/Express API.",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "RESTful API"],
-    liveUrl: "https://github.com/essammoussa/easycare-hospital-management",
+    liveUrl: "https://easy-care-theta.vercel.app",
     images: [
   
       "/imgs/easycare1.png",
@@ -50,7 +50,7 @@ const PROJECTS = [
     description:
       "A premium, responsive clothing web platform featuring an interactive product showcase, smooth animated transitions, dynamic cart management, and a sleek checkout system.",
     tags: ["React.js", "TailwindCSS", "Framer Motion", "Redux Toolkit", "Vite"],
-    liveUrl: "https://github.com/essammoussa/streetwear-ecommerce",
+    liveUrl: "https://essammoussa.github.io/streetwear-brand/",
     images: ["/imgs/WarOfLife1.png", "/imgs/WarOfLife2.png"],
   },
  
