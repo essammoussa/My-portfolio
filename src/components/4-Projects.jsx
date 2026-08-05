@@ -181,6 +181,16 @@ const CERTIFICATES = [
     certificateUrl: "https://coursera.org/share/98466e9e4d249d0306927ea45e841b9b",
     images: ["/imgs/Coursera5.png"],
   },
+
+  {
+    id: 6,
+    title: "Get Started with Cloud Native, DevOps, Agile, and NoSQL",
+    organization: "IBM",
+    description:
+      "Certification covering DevOps, Cloud Native, Agile, and NoSQL",
+    certificateUrl: "https://coursera.org/share/d364b9aad092a9dc483647178e9adfcd",
+    images: ["/imgs/Coursera6.png"],
+  },
 ];
 
 function ImageGallery({ images }) {
