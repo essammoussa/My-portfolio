@@ -21,6 +21,7 @@ const NAV_ITEMS = [
       </svg>
     ),
   },
+
   {
     label: "Services",
     href: "#services",
@@ -28,6 +29,16 @@ const NAV_ITEMS = [
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2" />
         <path d="M8 21h8M12 17v4" />
+      </svg>
+    ),
+  },
+    {
+    label: "Education",
+    href: "#education",
+    icon: (
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+        <path d="M6 12v5c3 3 9 3 12 0v-5" />
       </svg>
     ),
   },
@@ -59,22 +70,23 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const sections = NAV_ITEMS.map((i) => i.href.replace("#", ""));
-    const observers = [];
-    sections.forEach((id) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const obs = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting)
-            setActive(id.charAt(0).toUpperCase() + id.slice(1));
-        },
-        { threshold: 0.4 }
-      );
-      obs.observe(el);
-      observers.push(obs);
-    });
-    return () => observers.forEach((o) => o.disconnect());
+    const sectionIds = NAV_ITEMS.map((i) => i.href.replace("#", ""));
+
+    const getActiveSection = () => {
+      const scrollY = window.scrollY + window.innerHeight * 0.35;
+      let current = sectionIds[0];
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollY) {
+          current = id;
+        }
+      }
+      setActive(current.charAt(0).toUpperCase() + current.slice(1));
+    };
+
+    getActiveSection();
+    window.addEventListener("scroll", getActiveSection, { passive: true });
+    return () => window.removeEventListener("scroll", getActiveSection);
   }, []);
 
   useEffect(() => {
@@ -87,15 +99,28 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handler);
   }, [menuOpen]);
 
-  const handleNavClick = (label) => {
+  const handleNavClick = (e, href, label) => {
+    e.preventDefault();
     setActive(label);
     setMenuOpen(false);
+    
+    try {
+      window.history.pushState(null, "", href);
+    } catch (_) {}
+
+    const targetEl = document.querySelector(href);
+    if (targetEl) {
+      if (window.__lenis) {
+        window.__lenis.scrollTo(targetEl, { offset: -20, duration: 1.2 });
+      } else {
+        const top = targetEl.getBoundingClientRect().top + window.pageYOffset - 20;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }
   };
 
   return (
     <>
-
-
       {/* Desktop pill nav */}
       <nav className="bottom-nav" role="navigation" aria-label="Main navigation">
         {NAV_ITEMS.map((item, idx) => (
@@ -104,7 +129,7 @@ export default function Navbar() {
               href={item.href}
               className={`nav-item ${active === item.label ? "active" : ""}`}
               data-label={item.label}
-              onClick={() => handleNavClick(item.label)}
+              onClick={(e) => handleNavClick(e, item.href, item.label)}
               aria-label={item.label}
               aria-current={active === item.label ? "page" : undefined}
             >
@@ -139,7 +164,7 @@ export default function Navbar() {
             key={item.label}
             href={item.href}
             className={`mobile-nav-item ${active === item.label ? "active" : ""}`}
-            onClick={() => handleNavClick(item.label)}
+            onClick={(e) => handleNavClick(e, item.href, item.label)}
             aria-current={active === item.label ? "page" : undefined}
           >
             <span className="mobile-nav-icon">{item.icon}</span>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ShinyText from "./animations/ShinyText";
 
 const PROJECTS = [
    {
@@ -410,7 +411,9 @@ export default function Projects() {
   return (
     <>
       <section id="projects" className="pc2-section">
-        <span className="about-eyebrow">// My Work</span>
+        <span className="about-eyebrow">
+          // <ShinyText text="Featured Work &amp; Credentials" />
+        </span>
         <motion.h2
           className="pc2-heading"
           initial={{ opacity: 0, y: 20 }}
@@ -418,8 +421,18 @@ export default function Projects() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Projects & Certificates
+          Projects &amp; <span className="edu-title-gradient">Certificates</span>
         </motion.h2>
+        <motion.p
+          className="edu-subtitle"
+          style={{ maxWidth: "600px", margin: "-16px auto 36px", textAlign: "center" }}
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+         
+        </motion.p>
 
         <div className="pc2-tabs">
           {["projects", "certificates"].map((tab) => (

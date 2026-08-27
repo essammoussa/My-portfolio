@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
+import ShinyText from "./animations/ShinyText";
 
 const EMAILJS_SERVICE_ID  = "service_8y4yajg";
 const EMAILJS_TEMPLATE_ID = "template_lku3fga";
@@ -108,7 +109,10 @@ export default function Contact() {
       {/* Header */}
       <div className="c-header">
         <div>
-          <h2 className="c-title">Get In<br /><span className="c-title-ghost">Touch</span></h2>
+          <span className="about-eyebrow" style={{ display: "inline-block", marginBottom: "8px" }}>
+            // <ShinyText text="Let's build together" />
+          </span>
+          <h2 className="c-title">Get In <span className="edu-title-gradient">Touch</span></h2>
         </div>
         <p className="c-desc">Have a project in mind or want to work together? Drop me a message and I'll get back to you.</p>
       </div>
@@ -150,31 +154,45 @@ export default function Contact() {
             {isError && <p className="form-status form-status--error">✕ Something went wrong. Please try again.</p>}
 
             <div className="c-submit">
-              <span className="c-submit-note">Usually reply within 24h</span>
-              <button className={`send-btn${isSent ? " sent" : ""}${isError ? " error" : ""}`} type="submit" disabled={isSending}>
-                <span className="btn-icon">
-                  {isSending ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style={{ animation: "spin 1s linear infinite" }}><path fill="none" d="M0 0h24v24H0z"/><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" opacity=".3"/><path fill="currentColor" d="M20 12h2A10 10 0 0 0 12 2v2a8 8 0 0 1 8 8z"/></svg>
-                  ) : isSent ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="none" d="M0 0h24v24H0z"/><path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"/></svg>
-                  ) : isError ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="none" d="M0 0h24v24H0z"/><path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414L13.414 12l4.95 4.95-1.414 1.414L12 13.414l-4.95 4.95-1.414-1.414L10.586 12 5.636 7.05l1.414-1.414L12 10.586z"/></svg>
-                  ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="none" d="M0 0h24v24H0z"/><path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"/></svg>
-                  )}
-                </span>
-                <span>{isSending ? "Sending…" : isSent ? "Sent!" : isError ? "Try Again" : "Send Message"}</span>
+              <button
+                className={`contact-submit-btn${isSent ? " sent" : ""}${isError ? " error" : ""}`}
+                type="submit"
+                disabled={isSending}
+              >
+                {isSending ? (
+                  <>
+                    <svg className="contact-spinner" viewBox="0 0 24 24" width="16" height="16">
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" fill="none" opacity="0.25" />
+                      <path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                    </svg>
+                    <span>Sending message…</span>
+                  </>
+                ) : isSent ? (
+                  <>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Message Sent!</span>
+                  </>
+                ) : isError ? (
+                  <span>Try Again</span>
+                ) : (
+                  <>
+                    <span>Send Message</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="22" y1="2" x2="11" y2="13" />
+                      <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                  </>
+                )}
               </button>
+              <span className="c-submit-note">Usually reply within 24h</span>
             </div>
           </form>
         </div>
 
         {/* RIGHT: Info */}
         <div className="c-info-side">
-          <div className="c-available">
-            <span className="c-available-dot" />
-            Available for new projects
-          </div>
 
           <p className="c-section-label">Contact Details</p>
 

@@ -2,7 +2,7 @@ import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { useRef, useEffect } from "react";
 
-const navLinks = ["Home", "About", "Services", "Projects", "Contact"];
+const navLinks = ["Home", "About", "Education", "Services", "Projects", "Contact"];
 
 const socialLinks = [
   {
@@ -94,7 +94,21 @@ export default function Footer() {
           <ul>
             {navLinks.map((link) => (
               <li key={link}>
-                <a href={`#${link.toLowerCase()}`} className="footer-nav-link">
+                <a
+                  href={`#${link.toLowerCase()}`}
+                  className="footer-nav-link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(`#${link.toLowerCase()}`);
+                    if (target) {
+                      if (window.__lenis) {
+                        window.__lenis.scrollTo(target, { offset: -30, duration: 1.2 });
+                      } else {
+                        target.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }
+                  }}
+                >
                   <span className="footer-nav-arrow">→</span>
                   {link}
                 </a>
