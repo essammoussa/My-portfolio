@@ -98,10 +98,9 @@ export default function Hero() {
             <TextType
               text={[
                 "Full-Stack MERN Architecture",
-                "Computer & Data Science",
-                "React.js & Next.js Ecosystems",
                 "Node.js, Express & REST APIs",
-                "MongoDB & Database Optimization",
+                "MongoDB & MySQL Databases",
+                "Computer & Data Science",
               ]}
               typingSpeed={40}
               pauseDuration={1600}

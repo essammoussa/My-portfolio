@@ -18,8 +18,8 @@ const cards = [
       </svg>
     ),
     title: "Frontend Architecture",
-    desc: "Crafting fast, accessible interfaces from pixel-perfect React UIs with Tailwind, Shadcn/UI, and seamless state management.",
-    tags: ["React.js", "TypeScript", "JavaScript", "Tailwind CSS", "Redux", "React Query"],
+    desc: "Crafting fast, responsive interfaces with React.js, Next.js, TypeScript, Tailwind CSS, Shadcn/UI, and state management via Redux & React Query.",
+    tags: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "React Query"],
   },
   {
     glow: "#a78bfa",
@@ -36,8 +36,8 @@ const cards = [
       </svg>
     ),
     title: "Backend & REST APIs",
-    desc: "Building robust, secure RESTful APIs with Node.js, Express, JWT auth, role-based access control, and Socket.IO real-time features.",
-    tags: ["Node.js", "Express.js", "MongoDB", "Mongoose", "Socket.IO", "JWT"],
+    desc: "Building robust, secure RESTful APIs with Node.js, Express, PHP, Laravel, JWT authentication, role-based authorization, and Socket.IO.",
+    tags: ["Node.js", "Express.js", "PHP", "Laravel", "JWT / OAuth", "Socket.IO"],
   },
   {
     glow: "#38bdf8",
@@ -53,8 +53,8 @@ const cards = [
       </svg>
     ),
     title: "Full-Stack Web Apps",
-    desc: "Taking ideas from database schema design & REST APIs to responsive interactive React interfaces and live production deployments.",
-    tags: ["MERN Stack", "Transactions", "Aggregation", "Vercel", "Clean Code"],
+    desc: "Taking ideas from relational & NoSQL schema design and REST APIs to responsive React UIs and live production deployments.",
+    tags: ["MERN Stack", "Laravel MVC", "RESTful APIs", "Vercel", "Clean Code"],
   },
   {
     glow: "#ff6b9d",
@@ -71,8 +71,8 @@ const cards = [
       </svg>
     ),
     title: "Database & Concurrency",
-    desc: "Implementing concurrency-safe operations with MongoDB transactions, schema optimization, and analytical aggregation pipelines.",
-    tags: ["MongoDB", "SQL", "Mongoose", "Transactions", "Aggregation"],
+    desc: "Implementing concurrency-safe operations with MongoDB multi-document transactions, aggregation pipelines, MySQL relational modeling, and Eloquent ORM.",
+    tags: ["MongoDB", "MySQL", "Mongoose", "Transactions", "Aggregation", "Eloquent"],
   },
   {
     glow: "#6b5bff",
@@ -89,8 +89,8 @@ const cards = [
       </svg>
     ),
     title: "React UI Development",
-    desc: "Interactive, accessible React components with modern animations, responsive layouts, and typed architectures.",
-    tags: ["React.js", "Framer Motion", "Material UI", "Shadcn/UI", "Zod"],
+    desc: "Interactive, accessible React components with modern animations, responsive layouts, schema validation with Zod, and typed architectures.",
+    tags: ["React.js", "Framer Motion", "Material UI", "Shadcn/UI", "Zod", "Responsive Design"],
   },
   {
     glow: "#fbbf24",
@@ -108,8 +108,8 @@ const cards = [
       </svg>
     ),
     title: "Agile & Team Workflows",
-    desc: "Collaborating via Git & GitHub workflows, sprint milestones, peer code reviews, and structured problem solving.",
-    tags: ["Git", "GitHub", "Postman", "Agile/Scrum", "Code Reviews"],
+    desc: "Collaborating via Git & GitHub workflows, sprint-style milestones, peer code reviews, Postman testing, and Agile/Scrum fundamentals.",
+    tags: ["Git", "GitHub", "Postman", "Vercel", "Agile / Scrum", "Code Review"],
   },
 ];
 
@@ -121,13 +121,14 @@ const stats = [
 ];
 
 const skills = [
-  { name: "React.js & Hooks", level: 92 },
-  { name: "Node.js & Express.js", level: 88 },
-  { name: "MongoDB & Aggregations", level: 85 },
-  { name: "JavaScript (ES6+) & TS", level: 90 },
-  { name: "HTML5 & Tailwind CSS", level: 94 },
+  { name: "React.js & Next.js", level: 92 },
+  { name: "Node.js & Express.js", level: 90 },
+  { name: "PHP & Laravel Framework", level: 84 },
+  { name: "MongoDB & Aggregations", level: 88 },
+  { name: "MySQL & Relational Databases", level: 85 },
+  { name: "JavaScript (ES6+) & TypeScript", level: 92 },
+  { name: "Tailwind CSS & Material UI", level: 94 },
   { name: "Python & Data Science", level: 78 },
-  { name: "SQL & Databases", level: 80 },
   { name: "C++ & Data Structures", level: 75 },
 ];
 
@@ -243,15 +244,15 @@ export default function About() {
             whileInView="show" viewport={{ once: true }} custom={1}
           >
             <p className="about-bio">
-              I'm a passionate <span className="about-highlight">Full-Stack MERN Developer</span> with
-              hands-on experience building role-based, real-time, and API-driven web applications.
-              Currently pursuing my B.Sc. in <span className="about-highlight">Computer &amp; Data Science</span> at
+              I'm a passionate <span className="about-highlight">Full-Stack Developer</span> with
+              hands-on MERN experience (MongoDB, Express.js, React.js, Node.js) building role-based, real-time,
+              and API-driven web applications across multiple production-style projects. Currently pursuing my B.Sc. in <span className="about-highlight">Computer &amp; Data Science</span> at
               Alexandria University.
             </p>
             <p className="about-bio">
-              I specialize in secure authentication (JWT, OAuth, bcrypt), concurrency-safe MongoDB
-              transactions, and aggregation pipelines. Comfortable owning features end-to-end — from schema design
-              and REST API architecture to responsive React interfaces deployed live.
+              I implement secure authentication (JWT, OAuth, bcrypt), concurrency-safe MongoDB
+              transactions, and analytics aggregation pipelines. Recently expanded into <span className="about-highlight">PHP, Laravel, and MySQL</span>,
+              bringing a solid relational-database and MVC-framework perspective to a JavaScript-first skillset.
             </p>
 
             <div className="about-stats">

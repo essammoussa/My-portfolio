@@ -47,22 +47,50 @@ const EDUCATION_DATA = [
 
 const EXPERIENCE_DATA = [
   {
+    id: "iti",
+    role: "Full-Stack Development Intern",
+    company: "Information Technology Institute (ITI)",
+    period: "Aug 2026 – Sep 2026",
+    location: "Egypt",
+    badge: "Backend & PHP",
+    glowColor: "rgba(251, 191, 36, 0.2)",
+    borderColor: "rgba(251, 191, 36, 0.4)",
+    accent: "#fbbf24",
+    description:
+      "Completed an intensive backend training internship covering PHP, the Laravel framework, and MySQL, completing every lab and project assigned throughout the program.",
+    highlights: [
+      "Mastered backend engineering covering PHP, the Laravel framework, and MySQL databases",
+      "Practiced core Laravel architecture: routing, controllers, middleware, and Eloquent ORM",
+      "Designed relational schemas and executed complex queries in MySQL through hands-on labs and projects",
+      "Delivered production-style MVC backend services adhering to software engineering standards",
+    ],
+    tags: [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "Eloquent ORM",
+      "MVC Architecture",
+      "Relational Databases",
+      "REST APIs",
+    ],
+  },
+  {
     id: "techtrek",
     role: "Full-Stack Development Intern",
     company: "TechTrek",
-    period: "Jul 2026 – Present",
+    period: "Jul 2026 – Sep 2026",
     location: "Remote / Hybrid",
-    badge: "Current Role",
+    badge: "Full-Stack",
     glowColor: "rgba(56, 189, 248, 0.2)",
     borderColor: "rgba(56, 189, 248, 0.4)",
     accent: "#38bdf8",
     description:
-      "Engaging in an intensive full-stack curriculum spanning frontend architecture through backend systems, database integration, and production deployment.",
+      "Completed a 2-month full-stack curriculum progressing from frontend fundamentals through backend architecture, database integration, authentication, and deployment.",
     highlights: [
-      "Developing scalable React applications with TypeScript and modern hook patterns",
-      "Architecting state management workflows using Redux and React Query",
-      "Designing backend services with Node.js, Express, and MongoDB authentication",
-      "Collaborating on engineering capstone projects following production standards",
+      "Completed 2-month curriculum covering React, Next.js, TypeScript, Node.js, Express, and MongoDB",
+      "Delivered 2 full-stack projects during the internship, including an end-to-end capstone platform",
+      "Architected secure authentication flows, database integrations, and responsive UI components",
+      "Collaborated on production-grade engineering workflows and deployment pipelines",
     ],
     tags: [
       "React.js",
@@ -88,9 +116,9 @@ const EXPERIENCE_DATA = [
       "Government-sponsored elite technical training initiative focused on shipping enterprise-grade MERN stack applications in collaborative agile teams.",
     highlights: [
       "Shipped full-stack MERN applications on sprint-style milestones with peer code reviews",
-      "Designed RESTful APIs against SQL and NoSQL databases delivering end-to-end CRUD features",
-      "Engineered reusable component libraries and robust client-side routing systems",
-      "Debugged and resolved critical application defects under real deadline pressure",
+      "Designed and implemented REST APIs against both SQL and NoSQL databases delivering end-to-end CRUD features",
+      "Architected reusable component libraries and implemented client-side routing & state management",
+      "Debugged and resolved application-logic defects under deadline pressure to deliver demo-ready features",
     ],
     tags: [
       "MERN Stack",
@@ -127,6 +155,12 @@ const CERTIFICATIONS_PREVIEW = [
     issuer: "IBM / Coursera",
     year: "2025",
     iconColor: "#fbbf24",
+  },
+  {
+    title: "Getting Started with Git and GitHub",
+    issuer: "IBM / Coursera",
+    year: "2025",
+    iconColor: "#f43f5e",
   },
 ];
 

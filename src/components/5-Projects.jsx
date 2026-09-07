@@ -5,10 +5,10 @@ import ShinyText from "./animations/ShinyText";
 const PROJECTS = [
    {
     id: 9,
-    title: "EasyCare Hospital Management System",
+    title: "EasyCare — Healthcare & Appointment Platform",
     description:
-      "A comprehensive full-stack hospital management system. Features a responsive React dashboard for patient intake, staff schedules, and prescriptions, backed by a secure MongoDB/Express API.",
-    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "RESTful API"],
+      "A full-stack MERN healthcare management platform supporting 3 role-scoped user types (patient, doctor, admin), concurrency-safe bookings via MongoDB multi-document transactions, Google OAuth / JWT auth, real-time messaging with Socket.IO, and an analytics dashboard with aggregation pipelines.",
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.IO", "JWT / OAuth", "Recharts", "Leaflet"],
     liveUrl: "https://easy-care-theta.vercel.app",
     images: [
   
