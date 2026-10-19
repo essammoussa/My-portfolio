@@ -18,8 +18,8 @@ const cards = [
       </svg>
     ),
     title: "Frontend Architecture",
-    desc: "Crafting fast, responsive interfaces with React.js, Next.js, TypeScript, Tailwind CSS, Shadcn/UI, and state management via Redux & React Query.",
-    tags: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "React Query"],
+    desc: "Crafting fast, responsive interfaces with React.js, Next.js, TypeScript, Tailwind CSS, Shadcn/UI, and state management via Redux Toolkit & React Query.",
+    tags: ["React.js", "TypeScript", "Redux Toolkit", "React Query", "Tailwind CSS", "Shadcn/UI"],
   },
   {
     glow: "#a78bfa",
@@ -115,7 +115,7 @@ const cards = [
 
 const stats = [
   { value: "1+", label: "Years Experience" },
-  { value: "6+", label: "Production Projects" },
+  { value: "4+", label: "Production Projects" },
   { value: "5+", label: "Verified Certificates" },
   { value: "100%", label: "Dedication" },
 ];
@@ -127,6 +127,7 @@ const skills = [
   { name: "MongoDB & Aggregations", level: 88 },
   { name: "MySQL & Relational Databases", level: 85 },
   { name: "JavaScript (ES6+) & TypeScript", level: 92 },
+  { name: "Redux Toolkit & React Query", level: 88 },
   { name: "Tailwind CSS & Material UI", level: 94 },
   { name: "Python & Data Science", level: 78 },
   { name: "C++ & Data Structures", level: 75 },
